@@ -1,0 +1,36 @@
+from langchain_community.agent_toolkits.github.toolkit import GitHubToolkit
+from langchain_community.utilities.github import GitHubAPIWrapper
+from langchain_openai import ChatOpenAI
+from langgraph.prebuilt import create_react_agent
+
+# Initialize GitHub API Wrapper
+github = GitHubAPIWrapper()
+
+# Instantiate GitHub Toolkit
+toolkit = GitHubToolkit.from_github_api_wrapper(github)
+
+# View available tools
+all_tools = toolkit.get_tools()
+for tool in all_tools:
+    print(tool.name)
+
+llm = ChatOpenAI(model="gpt-4o", temperature=0)
+
+tools = [setattr(tool, "name", tool.mode) or tool for tool in toolkit.get_tools()]
+
+agent_executor = create_react_agent(llm, tools)
+
+
+def ai(query: str):
+    events = agent_executor.stream(
+        {"messages": [("system",
+                       "Don't use markdown, your output will be sent to a software program to use."),
+                      ("user", query)]},
+        stream_mode="values",
+    )
+    data = ""
+    for event in events:
+        event["messages"][-1].pretty_print()
+        data = event["messages"][-1]
+
+    return "data: [ " + data.content + " ]"
