@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "github-api-langgraph-demo"
+version = "0.1.0"
+description = "Sample app using GitHub tool for LangGraph demo"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = true
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.1.0"
+flask-cors = "^5.0.0"
+pygithub = "^2.5.0"
+langchain-community = "^0.3.15"
+langgraph = "^0.2.66"
+langchain-openai = "^0.3.1"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+app = "github_api_langgraph_demo.app:run"
