@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from dotenv import load_dotenv
 from flask import Flask
 from flask_cors import CORS
@@ -13,9 +15,7 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 @app.route('/data', methods=['GET'])
 def get_data():
-    return ai(
-        "Given the most prolific author of github issues, give me the date the last issue was created. Respond in JSON that looks like this: { \"most_active_author\": \"Some name\", \"date\": \"YYYY-MM-DD\", \"issue_title\": \"Some title\" }."
-    )
+    return ai(Path("my_app.txt").read_text())
 
 
 def run():

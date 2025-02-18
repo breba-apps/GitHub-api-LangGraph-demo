@@ -1,0 +1,2 @@
+Given the most prolific author of github issues, give me the date the last issue was created.
+I will need output as an HTML table that contains the following columns: issue number, author, title, and date created.
