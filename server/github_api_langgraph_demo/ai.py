@@ -3,6 +3,10 @@ from langchain_community.utilities.github import GitHubAPIWrapper
 from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Initialize GitHub API Wrapper
 github = GitHubAPIWrapper()
 
@@ -24,7 +28,7 @@ agent_executor = create_react_agent(llm, tools)
 def ai(query: str):
     events = agent_executor.stream(
         {"messages": [("system",
-                       "Don't use markdown, your output will be sent to a software program to use. All output must be in HTML format and will be displayed to an end user"),
+                       "Don't use markdown, your output will be sent to a software program to use. All output must be in HTML format and will be displayed to an end user inside a div on a webpage"),
                       ("user", query)]},
         stream_mode="values",
     )
@@ -33,4 +37,4 @@ def ai(query: str):
         event["messages"][-1].pretty_print()
         data = event["messages"][-1]
 
-    return "data: [ " + data.content + " ]"
+    return data.content
