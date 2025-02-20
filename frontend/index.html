@@ -20,7 +20,7 @@
         document.getElementById('loadDataBtn').addEventListener('click', async () => {
             const response = await fetch('http://localhost:5001/data');
             const text = await response.text();
-            const jsonData = JSON.parse(text.replace('data: ', ''));
+            const jsonData = JSON.parse(text).data;
             const dataTable = document.getElementById('dataTable');
             dataTable.innerHTML = '';
 
