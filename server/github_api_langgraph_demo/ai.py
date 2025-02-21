@@ -24,11 +24,11 @@ tools = [setattr(tool, "name", tool.mode) or tool for tool in toolkit.get_tools(
 
 agent_executor = create_react_agent(llm, tools)
 
-
 def ai(query: str):
     events = agent_executor.stream(
         {"messages": [("system",
-                       "Don't use markdown, your output will be sent to a software program to use. All output must be in HTML format and will be displayed to an end user inside a div on a webpage"),
+                       "Don't use markdown, your output will be sent to a software program to use. "
+                       "All output must be in HTML format and will be displayed to an end user inside a div on a webpage"),
                       ("user", query)]},
         stream_mode="values",
     )
