@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from flask import Flask
 from flask_cors import CORS
+from pydantic import BaseModel
 
 from github_api_langgraph_demo.ai import ai
 
@@ -11,11 +12,18 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 
+class Author(BaseModel):
+    """Respond to the user in this format."""
+    name: str
+    issue_count: int
+    comment_count: int
+
+
 @app.route('/data', methods=['GET'])
 def get_data():
-    return ai(
-        "Given the most prolific author of github issues, give me the date the last issue was created. Respond in JSON that looks like this: { \"most_active_author\": \"Some name\", \"date\": \"YYYY-MM-DD\", \"issue_title\": \"Some title\" }."
-    )
+    query = ("For the most prolific author of github issues, give me the number of issues they have created. "
+                     "Given the author's issues, I want to know the number of comments that same author has made." )
+    return ai(query, response_format=Author)
 
 
 def run():
