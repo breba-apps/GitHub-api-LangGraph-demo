@@ -27,8 +27,9 @@ agent_executor = create_react_agent(llm, tools)
 def ai(query: str):
     events = agent_executor.stream(
         {"messages": [("system",
-                       "Don't use markdown, your output will be sent to a software program to use. "
-                       "All output must be in HTML format and will be displayed to an end user inside a div on a webpage"),
+                       "You are a web server, serving HTML web pages. Do not use markdown for formatting. "
+                       "All output must be in HTML format and will be displayed to an end user. "
+                       "You need to start with doctype and html tags and provide the entire page"),
                       ("user", query)]},
         stream_mode="values",
     )
