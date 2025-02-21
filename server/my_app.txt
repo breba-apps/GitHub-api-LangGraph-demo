@@ -1,3 +1,5 @@
 Given the most prolific author of github issues, I want to see all of their issues and comments
 
-I will need to see ONLY the author, title, and comments. HTML elements can be styled using twitter bootstrap css which is already installed.
+I will need to see ONLY the author, title, and comments. HTML elements can be styled using twitter bootstrap css.
+
+Make the comments be inside an accordion collapsible element.
