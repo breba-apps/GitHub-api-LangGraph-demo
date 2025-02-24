@@ -23,6 +23,8 @@ class Author(BaseModel):
 def get_data():
     query = ("For the most prolific author of github issues, give me the number of issues they have created. "
                      "Given the author's issues, I want to know the number of comments that same author has made." )
+
+    # We are trying to get rid of engineering as much as possible, but Author and tools implementation is still in the way
     return ai(query, response_format=Author)
 
 
