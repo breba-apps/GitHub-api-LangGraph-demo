@@ -40,6 +40,7 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 @app.route('/data', methods=['GET'])
 def get_data():
     # Very limiting, has to conform to the model and available tools. Underwhelming experience.
+    # But prompt looks like natural language. Very reassuring
     example_query = ("For the most prolific author of github issues, give me the number of issues they have created. "
                      "Given the author's issues, I want to know the number of comments that same author has made." )
 
