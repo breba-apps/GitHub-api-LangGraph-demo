@@ -15,6 +15,7 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 @app.route('/data', methods=['GET'])
 def get_data():
+    # Wow where is the logic?
     return ai(Path("my_app.txt").read_text())
 
 

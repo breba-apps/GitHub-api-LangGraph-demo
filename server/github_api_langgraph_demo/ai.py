@@ -25,6 +25,7 @@ tools = [setattr(tool, "name", tool.mode) or tool for tool in toolkit.get_tools(
 agent_executor = create_react_agent(llm, tools)
 
 def ai(query: str):
+    # System prompt allows for broad range of instructions. But what does user input look like?
     events = agent_executor.stream(
         {"messages": [("system",
                        "You are a web server, serving HTML web pages. Do not use markdown for formatting. "
