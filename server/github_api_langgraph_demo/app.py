@@ -21,7 +21,7 @@ def get_data():
 
 def run():
     """
-    ou can get the data by using curl http://localhost:5001/data
+    You can get the data by using curl http://localhost:5001/data
     """
     app.run(debug=True, port=5001)
 
