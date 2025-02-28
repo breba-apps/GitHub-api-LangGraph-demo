@@ -1,0 +1,7 @@
+Find the most prolific author of github issues, and I want to see all of their issues and comments
+
+I will need to see ONLY the author, title, and comments. HTML elements can be styled using twitter bootstrap css.
+
+I want to see the comments in an acordion style dropdown.
+
+Give me a link to each issue. My repo is breba-apps/TempRepo
