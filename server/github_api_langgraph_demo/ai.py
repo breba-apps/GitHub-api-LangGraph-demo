@@ -25,6 +25,7 @@ llm = ChatOpenAI(model="gpt-4o", temperature=0)
 
 tools = [setattr(tool, "name", tool.mode) or tool for tool in toolkit.get_tools()]
 
+
 def ai(query: str, response_format: Type[BaseModel]):
     agent_executor = create_react_agent(llm, tools, response_format=response_format)
     events = agent_executor.stream(
