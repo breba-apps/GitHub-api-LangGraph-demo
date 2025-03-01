@@ -7,20 +7,8 @@ const PORT = 3000;
 // Serve static files from the frontend directory
 app.use(express.static(path.join(__dirname, '')));
 
-app.get('/', async (req, res) => {
-  try {
-    const response = await fetch('http://localhost:5001/data');
-    if (!response.ok) {
-      // If the response isn't OK, forward the status and an error message.
-      return res.status(response.status).send('Error fetching data');
-    }
-    // Frontend now will just fetch the page from the backend and present to browser as text. I guess we don't need it!!
-    const data = await response.text();
-    res.send(data);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Server error');
-  }
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
