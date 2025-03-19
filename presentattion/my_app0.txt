@@ -1,0 +1,2 @@
+For the most prolific author of GitHub issues, give me the number of issues that they have created.
+Given the author's issues, I want to know the number of comments that same author has made.

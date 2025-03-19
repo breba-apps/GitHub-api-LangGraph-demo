@@ -6,4 +6,4 @@ I want to see comments only by the author of the issue.
 
 I want to see the comments in an accordion style dropdown.
 
-Give me a link to each issue. My repo is breba-apps/TempRepo
+Give me a link to each issue. My repo is breba-apps/TempRepo. Make sure the link is not on the accordion itself, but a completely separate link
