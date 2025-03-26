@@ -1,0 +1,10 @@
+Find the most prolific author of github issues, and I want to see all of their issues and comments
+
+I will need to see ONLY the author, title, and comments. HTML elements can be styled using twitter bootstrap css.
+
+Show only the comments by the author of the issue.
+
+Use accordion style display to group comments.
+
+Give me a separate text below the comments to go to the actual issue on github.
+My GitHub repo is breba-apps/TempRepo.
