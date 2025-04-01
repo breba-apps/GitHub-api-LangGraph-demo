@@ -1,17 +1,48 @@
-Show me all issues that I can comment on.
-For each issue Show the following:
-1. List of all comments on that issue
-2. A text box and a button.
-The button will submit this comment to an issue.
+HTML Form for Online Survey
 
-When you press the button, it should make a request to http://127.0.0.1:5001/act
-The payload should include the text of the textbox, the GitHub issue id, and be presented as a prompt to another agent.
-It needs to explain to the Agent that we are commenting on the issue.
+Visual layout of the form
+Title
+Should show the title: "User Information and Preferences"
 
-At the bottom of the page have a status bar that shows response from the "/act" endpoint
+Description
+Please fill out the form below to provide your contact information and t-shirt size preference.
 
-The "/act" endpoint takes in a plain text prompt that looks like this:
-Write a comment for the issue.
-Issue ID: 2, Comment: hello
+Email field
+1. An input field for the email address with validation to ensure a proper email format.
 
-The response from the "/act" endpoint is HTML, not JSON
+Phone number field
+1. An input field for the phone number with an input mask for a standard format (e.g., (123) 456-7890).
+
+T-shirt size field
+1. A dropdown menu to select t-shirt size with options: Small, Medium, Large, X-Large.
+
+Submit button visual
+1. A submit button labeled "Submit" to submit the form.
+
+Submit button behavior
+1. When the submit button is clicked, the form data should be stored for review and a confirmation message should be displayed to the user.
+::final prompt result::
+
+HTML Form for Online Survey
+
+Visual layout of the form
+Title
+Should show the title: "User Information and Preferences"
+
+Description
+Please fill out the form below to provide your contact information and t-shirt size preference.
+
+Email field
+1. An input field for the email address with validation to ensure a proper email format.
+
+Phone number field
+1. An input field for the phone number with an input mask for a standard format (e.g., (123) 456-7890).
+
+T-shirt size field
+1. A dropdown menu to select t-shirt size with options: Small, Medium, Large, X-Large.
+
+Submit button visual
+1. A submit button labeled "Submit" to submit the form.
+
+Submit button behavior
+1. When the submit button is clicked, the form data should be stored for review and a confirmation message should be displayed to the user.
