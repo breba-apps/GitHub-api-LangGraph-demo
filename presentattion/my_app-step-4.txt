@@ -4,14 +4,4 @@ For each issue Show the following:
 2. A text box and a button.
 The button will submit this comment to an issue.
 
-When you press the button, it should make a request to http://127.0.0.1:5001/act
-The payload should include the text of the textbox, the github issue id, and be presented as a prompt to another agent.
-It needs to explain to the Agent that we are commenting on the issue.
-
 At the bottom of the page have a status bar that shows response from the "/act" endpoint
-
-The "/act" endpoint takes in a plain text prompt that looks like this:
-Write a comment for the issue.
-Issue ID: 2, Comment: hello
-
-The response from the "/act" endpoint is HTML, not JSON
