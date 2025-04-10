@@ -1,0 +1,6 @@
+langchain-mcp-adapters
+langchain-openai
+langgraph
+langchain_community
+PyGithub
+flask
