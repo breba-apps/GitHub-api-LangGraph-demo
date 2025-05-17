@@ -1,0 +1,8 @@
+Given my repo: https://github.com/breba-apps/TempRepo
+Find the last 1 open issues.
+
+For each issue make sure to display labels, project repo, and demo video link, if they exist. 
+Also for each issue create a dropdown with one name "yasonk".
+A button to submit the value will be used to update "assignee" for the issue on github.
+
+Don't make up links or any other content, just use the data provided.
