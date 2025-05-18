@@ -1,8 +1,19 @@
-Given my repo: https://github.com/breba-apps/TempRepo
-Find the last 1 open issues.
+Background
+I'm organizing a hackathon. 
+Pleaple are submitting their hacks to a repo as Github Issues.
+Here is the Github Repo : https://github.com/breba-apps/TempRepo
+The reviewers for these submitted hacks are:
+yasonk
+scarlettej
+sydneys
 
-For each issue make sure to display labels, project repo, and demo video link, if they exist. 
-Also for each issue create a dropdown with one name "yasonk".
+Now do the following:
+Find the last 10 open submissions. 
+
+For each submission make sure to display labels, project repo, and demo video link, if they exist. 
+Also for each issue create a dropdown with the names of the reviewers.
 A button to submit the value will be used to update "assignee" for the issue on github.
+The button will send the payload to the "/act" endpoint.
+Make sure to specify in your instructions to the "/act" endpoint to update the "assignee" field in GitHub"
 
 Don't make up links or any other content, just use the data provided.
