@@ -1,19 +1,26 @@
 Background
 I'm organizing a hackathon. 
-Pleaple are submitting their hacks to a repo as Github Issues.
-Here is the Github Repo : https://github.com/breba-apps/TempRepo
-The reviewers for these submitted hacks are:
+Pleople are submitting their hacks to a GitHub repo using GitHub Issues.
+Here is the GitHub Repo : https://github.com/breba-apps/TempRepo
+The reviewers for the submitted hacks are:
 yasonk
 scarlettej
 sydneys
 
 Now do the following:
-Find the last 10 open submissions. 
+Find the last 10 open submissions.
 
-For each submission make sure to display labels, project repo, and demo video link, if they exist. 
+For each submission make sure to display:
+issue labels,
+project repo,
+demo video link,
+deployed application url
+
 Also for each issue create a dropdown with the names of the reviewers.
-A button to submit the value will be used to update "assignee" for the issue on github.
-The button will send the payload to the "/act" endpoint.
-Make sure to specify in your instructions to the "/act" endpoint to update the "assignee" field in GitHub"
+
+A button to submit the reviewer will be used to update the issue on GitHub.
+Make sure to specify that the button modifies the "assignee" for the given GitHub issue.
 
 Don't make up links or any other content, just use the data provided.
+
+Use tailwind CSS to make it look good.
