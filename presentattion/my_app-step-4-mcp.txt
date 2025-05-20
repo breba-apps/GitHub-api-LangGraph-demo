@@ -11,6 +11,7 @@ Now do the following:
 Find the last 10 open submissions.
 
 For each submission make sure to display:
+Current Assignee (don't make one up, pull from the "assignees" field only)
 issue labels,
 project repo,
 demo video link,
@@ -20,6 +21,7 @@ Also for each issue create a dropdown with the names of the reviewers.
 
 A button to submit the reviewer will be used to update the issue on GitHub.
 Make sure to specify that the button modifies the "assignee" for the given GitHub issue.
+If assignment is successful also update the relevant field for that issue on the page.
 
 Don't make up links or any other content, just use the data provided.
 

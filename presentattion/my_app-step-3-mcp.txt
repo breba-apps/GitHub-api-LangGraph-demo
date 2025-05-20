@@ -5,5 +5,7 @@ Make sure to show only comments by the author of the issue.
 Bellow the comments, include a link to the issue on GitHub. 
 
 I will need to see ONLY the author, title, and comments. 
+
+Style:
 HTML elements can be styled using bootstrap css.
 For convenience use accordion style display to make it easier scroll through the entries.
