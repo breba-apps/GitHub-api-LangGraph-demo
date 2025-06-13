@@ -1,7 +1,7 @@
 Background
 I'm organizing a hackathon. 
 Pleople are submitting their hacks to a GitHub repo using GitHub Issues.
-Here is the GitHub Repo : https://github.com/breba-apps/TempRepo
+Here is the GitHub Repo: https://github.com/breba-apps/TempRepo
 
 The reviewers for the submitted hacks are:
 yasonk
@@ -9,7 +9,7 @@ scarlettej
 sydneys
 
 Now do the following:
-Find the last 10 open submissions.
+Find the last 100 open submissions.
 
 For each submission make sure to display:
 Current Assignee (don't make one up, pull from the "assignees" field only)
